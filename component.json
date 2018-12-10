@@ -1,0 +1,20 @@
+{
+    "name": "elasticsearch-fluentd-kibana",
+    "subcomponents": [
+        {
+            "name": "elasticsearch",
+            "method": "git",
+            "source": "https://github.com/timfpark/marina-elasticsearch"
+        },
+        {
+            "name": "fluentd",
+            "method": "git",
+            "source": "https://github.com/timfpark/marina-fluentd"
+        },
+        {
+            "name": "kibana",
+            "method": "git",
+            "source": "https://github.com/timfpark/marina-kibana"
+        }
+    ]
+}
