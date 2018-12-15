@@ -1,20 +1,22 @@
 {
     "name": "elasticsearch-fluentd-kibana",
+    "type": "static",
+    "path": "./manifests",
     "subcomponents": [
         {
             "name": "elasticsearch",
             "method": "git",
-            "source": "https://github.com/timfpark/marina-elasticsearch"
+            "source": "https://github.com/timfpark/fabrikate-elasticsearch"
         },
         {
             "name": "fluentd",
             "method": "git",
-            "source": "https://github.com/timfpark/marina-fluentd"
+            "source": "https://github.com/timfpark/fabrikate-fluentd-elasticsearch"
         },
         {
             "name": "kibana",
             "method": "git",
-            "source": "https://github.com/timfpark/marina-kibana"
+            "source": "https://github.com/timfpark/fabrikate-kibana"
         }
     ]
 }
