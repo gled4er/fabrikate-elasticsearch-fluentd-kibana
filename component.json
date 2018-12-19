@@ -1,22 +1,25 @@
 {
     "name": "elasticsearch-fluentd-kibana",
-    "type": "static",
+    "generator": "static",
     "path": "./manifests",
     "subcomponents": [
         {
             "name": "elasticsearch",
-            "method": "git",
-            "source": "https://github.com/timfpark/fabrikate-elasticsearch"
+            "generator": "helm",
+            "repo": "https://github.com/helm/charts",
+            "path": "stable/elasticsearch"
         },
         {
-            "name": "fluentd",
-            "method": "git",
-            "source": "https://github.com/timfpark/fabrikate-fluentd-elasticsearch"
+            "name": "fluentd-elasticsearch",
+            "generator": "helm",
+            "repo": "https://github.com/helm/charts",
+            "path": "stable/fluentd-elasticsearch"
         },
         {
             "name": "kibana",
-            "method": "git",
-            "source": "https://github.com/timfpark/fabrikate-kibana"
+            "generator": "helm",
+            "repo": "https://github.com/helm/charts",
+            "path": "stable/kibana"
         }
     ]
 }
