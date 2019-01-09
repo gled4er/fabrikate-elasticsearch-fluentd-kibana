@@ -3,15 +3,17 @@
     "subcomponents": {
         "elasticsearch": {
             "config": {
+                "namespace": "elasticsearch"
+            }
+        },
+        "elasticsearch-curator": {
+            "config": {
                 "namespace": "elasticsearch",
-                "data": {
-                    "persistence": {
-                        "storageClass": "default"
-                    }
-                },
-                "master": {
-                    "persistence": {
-                        "storageClass": "default"
+                "config": {
+                    "elasticsearch": {
+                        "hosts": [
+                            "elasticsearch-client.elasticsearch.svc.cluster.local"
+                        ]
                     }
                 }
             }

@@ -10,6 +10,12 @@
             "path": "stable/elasticsearch"
         },
         {
+            "name": "elasticsearch-curator",
+            "generator": "helm",
+            "repo": "https://github.com/helm/charts",
+            "path": "stable/elasticsearch-curator"
+        },
+        {
             "name": "fluentd-elasticsearch",
             "generator": "helm",
             "repo": "https://github.com/helm/charts",
