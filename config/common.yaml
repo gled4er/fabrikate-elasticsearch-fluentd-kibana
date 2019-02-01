@@ -1,0 +1,27 @@
+config:
+subcomponents:
+  elasticsearch:
+    config:
+      namespace: elasticsearch
+  elasticsearch-curator:
+    config:
+      namespace: elasticsearch
+      configMaps:
+        config_yml: |-
+          ---
+          client:
+            hosts:
+              - elasticsearch-client.elasticsearch.svc.cluster.local
+            port: 9200
+            use_ssl: True
+  fluentd-elasticsearch:
+    config:
+      namespace: fluentd
+      elasticsearch:
+        host: "elasticsearch-client.elasticsearch.svc.cluster.local"
+  kibana:
+    config:
+      namespace: kibana
+      files:
+        kibana.yml:
+          elasticsearch.url: "http://elasticsearch-client.elasticsearch.svc.cluster.local:9200"
