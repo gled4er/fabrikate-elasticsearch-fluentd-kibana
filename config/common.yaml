@@ -13,7 +13,7 @@ subcomponents:
             hosts:
               - elasticsearch-client.elasticsearch.svc.cluster.local
             port: 9200
-            use_ssl: True
+            use_ssl: False
   fluentd-elasticsearch:
     config:
       namespace: fluentd
