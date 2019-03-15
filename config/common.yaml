@@ -6,6 +6,8 @@ subcomponents:
   elasticsearch-curator:
     config:
       namespace: elasticsearch
+      cronjob:
+        successfulJobsHistoryLimit: 0
       configMaps:
         config_yml: |-
           ---
@@ -13,7 +15,7 @@ subcomponents:
             hosts:
               - elasticsearch-client.elasticsearch.svc.cluster.local
             port: 9200
-            use_ssl: False 
+            use_ssl: False
   fluentd-elasticsearch:
     config:
       namespace: fluentd
