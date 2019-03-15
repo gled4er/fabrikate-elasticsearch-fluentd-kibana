@@ -3,6 +3,10 @@ subcomponents:
   elasticsearch:
     config:
       namespace: elasticsearch
+      client:
+        resources:
+          limits:
+            memory: "2048Mi"
   elasticsearch-curator:
     config:
       namespace: elasticsearch
