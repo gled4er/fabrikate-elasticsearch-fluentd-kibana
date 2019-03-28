@@ -1,15 +1,17 @@
 config:
 subcomponents:
   elasticsearch:
+    namespace: elasticsearch
+    injectNamespace: true
     config:
-      namespace: elasticsearch
       client:
         resources:
           limits:
             memory: "2048Mi"
   elasticsearch-curator:
+    namespace: elasticsearch
+    injectNamespace: true
     config:
-      namespace: elasticsearch
       cronjob:
         successfulJobsHistoryLimit: 0
       configMaps:
@@ -21,13 +23,15 @@ subcomponents:
             port: 9200
             use_ssl: False
   fluentd-elasticsearch:
+    namespace: fluentd
+    injectNamespace: true
     config:
-      namespace: fluentd
       elasticsearch:
         host: "elasticsearch-client.elasticsearch.svc.cluster.local"
   kibana:
+    namespace: kibana
+    injectNamespace: true
     config:
-      namespace: kibana
       files:
         kibana.yml:
           elasticsearch.url: "http://elasticsearch-client.elasticsearch.svc.cluster.local:9200"
